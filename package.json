@@ -6,15 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iamfaizandev/Bmi-Calculator.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iamfaizandev/Bmi-Calculator/issues"
-  },
-  "homepage": "https://github.com/iamfaizandev/Bmi-Calculator#readme"
+  "license": "ISC"
 }
