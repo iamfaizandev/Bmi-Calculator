@@ -6,11 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="src/script.js"></script>
-    <link rel="stylesheet" href="src/sttyle.css">
+    <script src="src/index.js"></script>
+    <link rel="stylesheet" href="src/style.css">
     <title>Body Mass Index</title>
 </head>
-<body>
-    <h2 class="text-center text-danger">Work in Process</h2>
+<body class="container-fluid">
+     <h2 class="text-center mt-2 mb-2">BMI Calculate</h2>
+   <div class="container mt-4">
+    <p class="bg-dark text-white p-2 mt-0 mb-1 text-center"><span class="bi bi-caret-down-square-fill rounded rounded-3 me-1"></span>Modify the Value and Click the Calculate Button to use </p>
+    <div class="box">
+       <div class="box-1">
+         <div class="header">
+            <span>US Units</span>
+            <span id="metric">Metric Units</span>
+            <span>Other Units</span>
+         </div>
+         <div class="cal-box">
+            <div class="input-group d-flex jusyify-content-between">
+                <label for="age" style="font-size: 14px;" class="input-group-text mt-2">Age</label>
+                <input type="text" size="2" id="txtAge" onkeyup="VerifyAge()" class="form-control" style="height: 40px; width: 60px; margin-top: 10px;" placeholder="Ages - 2- 120" >
+                <div id="ageMsg"></div>
+            </div>
+            <div class="d-flex jusyify-content-between mt-3 text-white">
+                <label for="Gender" class="me-2 text-dark">Gender</label>
+                <input type="radio" id="txtMale" class="form-check-input me-2" name="Gender" value="Male"> <Span class="me-2 ">Male</Span>
+                <input type="radio" id="txtFemale" class="form-check-input me-2"  name="Gender" value="Female"> <Span>Female</Span>
+            </div>
+            <div class="height">
+            <div class="d-flex mt-3">
+            <label for="height"> Height :</label>
+            <input type="text" id="txtHeight"  name="height" placeholder="cm">
+            </div>
+
+            <div class="d-flex mt-3"> 
+            <label for="Weight" > Weight :</label>
+            <input type="text" id="txtWeight" name="weight" placeholder="kg">
+            </div>
+        </div>
+            <div class="footer mt-2 text-center ">
+                <button class="btn btn-success me-3" onclick="BmiClick()">Calculate <span class="bi bi-caret-right-square-fill"></span></button>
+                <button class="btn btn-secondary " onclick="BmiClear()">Clear</button>
+            </div>
+                
+
+         </div>
+       </div>
+       <div class="box-2">
+        <div class="result mb-4">
+          <span style="color:black; background-color: wheat; font-family: cursive; padding: 5px; border-radius: 5px; margin-right: 80px;">Your BMI : </span><span id="result" class="bg-success text-white"></span>
+        </div>
+        <div class="mt-2 mb-4">
+          <span style="color: White; background-color: darkgoldenrod; padding: 5px; border-radius: 5px; margin-right: 80px;">Your Weight Status : </span><span id="status"></span>
+         </div>
+       <div class="p-1 ms-2 mb-2" >
+        <span class="me-1  red">Under Weight</span>
+        <span  class=" green">Normal Weight</span>
+        <span  class="me-2 yellow">OverWeight</span>
+        <div class="mt-4 ">
+          <span  class="me-2 blue">Obses Weight</span>
+        <span  class="me-2 darkred">Extremly Obses Weight</span>
+        </div>
+        
+        
+        
+      
+       </div>
+      
+    </div>
+</div>
+
 </body>
 </html>
